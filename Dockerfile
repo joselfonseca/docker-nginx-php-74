@@ -28,8 +28,8 @@ RUN dpkg -i datadog-php-tracer_0.41.1_amd64.deb \
     && ln -sf /dev/stderr /var/log/nginx/error.log
 
 COPY default /etc/nginx/sites-available/default
-COPY php-fpm.conf /etc/php/7.4/fpm/php-fpm.conf
 COPY www.conf /etc/php/7.4/fpm/pool.d/www.conf
+COPY php-fpm.conf /etc/php/7.4/fpm/php-fpm.conf
 COPY php.ini /etc/php/7.4/fpm/php.ini
 
 EXPOSE 80
